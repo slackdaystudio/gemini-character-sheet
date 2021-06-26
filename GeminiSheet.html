@@ -1,0 +1,3454 @@
+<div class="sheet-section-main">
+	<span style="float:right; margin-top: -2px; padding-left: 2px">Edit</span><input type="checkbox" style="float:right" class="sheet-block-switch" name="attr_block_switch" value="1">
+	<div class="sheet-block-a">
+		<div style="display: table; width: 100%;">
+			<div style="display: table-row">
+				<div style="display: table-cell; width: 30%;">
+					<img src="https://slackdaystudio.files.wordpress.com/2021/06/the-chimera-system-logo-black-web.png" width="220" />
+				</div>
+				<div style="display: table-cell; width: 45%; vertical-align: top">
+					<table style="width:99%">
+						<tr>
+							<td style="width: 25%">
+								<label>Name:</label>
+							</td>
+							<td style="width: 75%">
+								<span name="attr_charactername" />
+							</td>
+						</tr>
+						<tr>
+							<td style="width: 25%">
+								<label>Occupation:</label>
+							</td>
+							<td style="width: 75%">
+								<span name="attr_occupation" />
+							</td>
+						</tr>
+						<tr>
+							<td style="width: 25%">
+								<label>Species:</label>
+							</td>
+							<td style="width: 75%">
+								<span name="attr_species" />
+							</td>
+						</tr>
+						<tr>
+							<td style="width: 25%">
+								<label>Gender:</label>
+							</td>
+							<td style="width: 75%">
+								<span name="attr_gender" />
+							</td>
+						</tr>
+						<tr>
+							<td style="width: 25%">
+								<label>Age:</label>
+							</td>
+							<td style="width: 75%">
+								<span name="attr_age" />
+							</td>
+						</tr>
+						<tr>
+							<td style="width: 25%">
+								<label>Height:</label>
+							</td>
+							<td style="width: 75%">
+								<span name="attr_height" />
+							</td>
+						</tr>
+						<tr>
+							<td style="width: 25%">
+								<label>Weight:</label>
+							</td>
+							<td style="width: 75%">
+								<span name="attr_weight" />
+							</td>
+						</tr>
+					</table>					
+				</div>
+				<div style="display: table-cell; width: 25%; vertical-align: top">
+					<table style="width:99%">
+						<tr>
+							<td style="width: 75%">
+								<label>Attributes:</label>
+							</td>
+							<td style="width: 25%; text-align: right">
+								<span name="attr_attributepoints" />
+							</td>
+						</tr>
+						<tr>
+							<td style="width: 75%">
+								<label>Skills:</label>
+							</td>
+							<td style="width: 25%; text-align: right">
+								<span name="attr_skillpoints" />
+							</td>
+						</tr>
+						<tr>
+							<td style="width: 75%">
+								<label>Specializations:</label>
+							</td>
+							<td style="width: 25%; text-align: right">
+								<span name="attr_specializationpoints" />
+							</td>
+						</tr>
+						<tr>
+							<td style="width: 75%">
+								<label>Advantages:</label>
+							</td>
+							<td style="width: 25%; text-align: right">
+								<span name="attr_advantagepoints" />
+							</td>
+						</tr>
+						<tr>
+							<td style="width: 75%">
+								<label>Powers:</label>
+							</td>
+							<td style="width: 25%; text-align: right">
+								<span name="attr_powerpoints" />
+							</td>
+						</tr>
+						<tr>
+							<td style="width: 75%">
+								<label>Martial Arts:</label>
+							</td>
+							<td style="width: 25%; text-align: right">
+								<span name="attr_martialartpoints" />
+							</td>
+						</tr>
+						<tr>
+							<td style="width: 75%;">
+								&nbsp;
+							</td>
+							<td style="width: 25%; text-align: right; border-top-style: 1px dashed black;">
+								<span name="attr_totalpoints" />
+							</td>
+						</tr>
+					</table>					
+				</div>
+			</div>	
+		</div>
+		<div class="sheet-section">
+			<div style="padding-bottom: 10px">
+				<div>
+					<div class="sheet-heading sheet-die-roller-tab">
+						Attributes &amp; Skills
+					</div>
+					<div class="sheet-die-roller">
+						<table style="float: left; border-top: 0px;">
+							<tr>
+								<td style="line-height: 18px;">
+									<div>
+										<div class="sheet-tooltip">
+											<button type="action" name="act_attributeandskillsclassic" style="font-family: 'Pictos';">,</button>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Classic Roll</h3>
+													<p>Rolls dice and counts face value adding in any pips.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+										<div class="sheet-tooltip">
+											<button type="action" name="act_attributeandskillssuccesses" style="font-family: 'Pictos';">2</button>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Successes Roll</h3>
+													<p>Rolls dice and counts successes which are dice with a face value of 3 or greater.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+										<div class="sheet-tooltip">
+											<button type="action" name="act_attributeandskillsluck" style="font-family: 'Pictos';">k</button>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Luck Roll</h3>
+													<p>Performs a luck test by rolling the specified number of dice with each "6" counting as one luck point.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+										<div class="sheet-tooltip">
+											<button type="action" name="act_attributeandskillsunluck" style="font-family: 'Pictos';">e</button>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Unluck Roll</h3>
+													<p>Performs an uluck test by rolling the specified number of dice with each "1" counting as one unluck point.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+										<input type="hidden" class="sheet-tabstoggle" name="attr_attributeandskillssheetTab" value="attributeandskillsclassic"  />
+										<div class="sheet-attributeandskillsclassic">
+											Die Code: <input type="number" name="attr_attributeandskillsdice" class="sheet-smallnumber sheet-shortnumber" min="1" value="2" />D+
+											<input type="number" name="attr_attributeandskillspip" class="sheet-smallnumber sheet-shortnumber" min="-99" max="99" value="0" />
+											<div class="sheet-tooltip">
+												MAP:
+												<div class="sheet-right">
+													<div class="sheet-text-content">
+														<h3>Multi-Action Penalty (MAP)</h3>
+														<p>The total penalty applied to your action rolls based on the number of standard actions you wish to take.</p>
+														<p>Equal to the number of standard actions you are taking -1 (n - 1).</p>
+													</div>
+													<i></i>
+												</div>
+											</div>									
+											<input type="number" name="attr_attributeandskillspenalty" class="sheet-smallnumber sheet-shortnumber" min="-99" max="0" value="0" />
+											<button type='roll' style="font-family: dicefontd6; padding-top: 2px" value='!gd [[(@{attributeandskillsdice} + @{attributeandskillspenalty})d6 + @{attributeandskillspip}]]'>F</button>
+										</div>
+										<div class="sheet-attributeandskillssuccesses">
+											Die Code: <input type="number" name="attr_attributeandskillssuccessdice" class="sheet-smallnumber sheet-shortnumber" min="1" value="2" />D+
+											<button type='roll' style="font-family: dicefontd6; padding-top: 2px" value='!gds [[@{attributeandskillssuccessdice}d6]]'>F</button>
+										</div>
+										<div class="sheet-attributeandskillsluck">
+											Die Code: <input type="number" name="attr_attributeandskillsluckdice" class="sheet-smallnumber sheet-shortnumber" min="1" value="2" />D+
+											<button type='roll' style="font-family: dicefontd6; padding-top: 2px" value='!gdl [[@{attributeandskillsluckdice}d6]]'>F</button>
+										</div>
+										<div class="sheet-attributeandskillsunluck">
+											Die Code: <input type="number" name="attr_attributeandskillsunluckdice" class="sheet-smallnumber sheet-shortnumber" min="1" value="2" />D+
+											<button type='roll' style="font-family: dicefontd6; padding-top: 2px" value='!gdu [[@{attributeandskillsunluckdice}d6]]'>F</button>
+										</div>
+									</div>
+									<script type="text/worker">
+										const buttonlist = ["attributeandskillsclassic", "attributeandskillssuccesses", "attributeandskillsluck", "attributeandskillsunluck"];
+										buttonlist.forEach(button => {
+											on(`clicked:${button}`, () => {
+												setAttrs({
+													attributeandskillssheetTab: button
+												});
+											});
+										});
+									</script>	
+								</td>
+							</tr>
+						</table>						
+					</div>
+					<div style="padding-top: 6px;">
+						<button type='roll' style="padding: 3px;" value='!gd [[@{agility}d6 + @{agilitypip}&{tracker}]]'>Initiative</button>	
+					</div>
+				</div>
+			</div>
+			<div class="sheet-3colrow">
+				<div name="Strength-Agility" class="sheet-col">
+					<div name="Strength" class="sheet-bold" style="line-height: 1.75em">
+						<div class="sheet-attribute-table">
+							<div class="sheet-attribute-name-cell">
+								<div class="sheet-tooltip">
+									<span>Strength</span>
+									<div class="sheet-right">
+										<div class="sheet-text-content">
+											<h3>Strength</h3>
+											<p>Raw physical strength and capability to inflict damage.</p>
+										</div>
+										<i></i>
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-die-code-cell">
+								<button type='roll' class="sheet-link-button" value='!gdr [[@{strength}d6 + @{strengthpip}]]'>
+									<span name="attr_strength"></span><span>D+</span><span name="attr_strengthpip"></span>
+								</button>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div class="sheet-skill-name-cell">
+								<div class="sheet-tooltip">
+									<span>Climbing</span>
+									<div class="sheet-right">
+										<div class="sheet-text-content">
+											<h3>Climbing</h3>
+											<p>Scaling various surfaces.</p>
+										</div>
+										<i></i>
+									</div>
+								</div>
+							</div>
+							<div class="sheet-skill-die-code-cell">
+								<button type='roll' class="sheet-link-button" value='!gdr [[(@{strength} + @{climbingdice})d6 + (@{strengthpip} + @{climbingpip})]]'>
+									<span name="attr_climbingdice"></span><span>D+</span><span name="attr_climbingpip"></span>
+								</button>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div class="sheet-skill-name-cell">
+								<div class="sheet-tooltip">
+									<span>Jumping</span>
+									<div class="sheet-right">
+										<div class="sheet-text-content">
+											<h3>Jumping</h3>
+											<p>Leaping over obstacles.</p>
+										</div>
+										<i></i>
+									</div>
+								</div>
+							</div>
+							<div class="sheet-skill-die-code-cell">
+								<button type='roll' class="sheet-link-button" value='!gdr [[(@{strength} + @{jumpingdice})d6 + (@{strengthpip} + @{jumpingpip})]]'>
+									<span name="attr_jumpingdice"></span><span>D+</span><span name="attr_jumpingpip"></span>
+								</button>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div class="sheet-skill-name-cell">
+								<div class="sheet-tooltip">
+									<span>Lifting</span>
+									<div class="sheet-right">
+										<div class="sheet-text-content">
+											<h3>Lifting</h3>
+											<p>Increases your ability to lift weights while under stress.</p>
+										</div>
+										<i></i>
+									</div>
+								</div>
+							</div>
+							<div class="sheet-skill-die-code-cell">
+								<button type='roll' class="sheet-link-button" value='!gdr [[(@{strength} + @{liftingdice})d6 + (@{strengthpip} + @{liftingpip})]]'>
+									<span name="attr_liftingdice"></span><span>D+</span><span name="attr_liftingpip"></span>
+								</button>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div class="sheet-skill-name-cell">
+								<div class="sheet-tooltip">
+									<span>Running</span>
+									<div class="sheet-right">
+										<div class="sheet-text-content">
+											<h3>Running</h3>
+											<p>Moving quickly on the ground while avoiding obstacles and keeping from stumbling.</p>
+										</div>
+										<i></i>
+									</div>
+								</div>
+							</div>
+							<div class="sheet-skill-die-code-cell">
+								<button type='roll' class="sheet-link-button" value='!gdr [[(@{strength} + @{runningdice})d6 + (@{strengthpip} + @{runningpip})]]'>
+									<span name="attr_runningdice"></span><span>D+</span><span name="attr_runningpip"></span>
+								</button>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div class="sheet-skill-name-cell">
+								<div class="sheet-tooltip">
+									<span>Swimming</span>
+									<div class="sheet-right">
+										<div class="sheet-text-content">
+											<h3>Swimming</h3>
+											<p>Moving and surviving in a liquid medium.</p>
+										</div>
+										<i></i>
+									</div>
+								</div>
+							</div>
+							<div class="sheet-skill-die-code-cell">
+								<button type='roll' class="sheet-link-button" value='!gdr [[(@{strength} + @{swimmingdice})d6 + (@{strengthpip} + @{swimmingpip})]]'>
+									<span name="attr_swimmingdice"></span><span>D+</span><span name="attr_swimmingpip"></span>
+								</button>
+							</div>
+						</div>
+					</div>
+					<div name="Agility" class="sheet-bold" style="line-height: 1.75em">
+						<div class="sheet-attribute-table">
+							<div class="sheet-attribute-name-cell">
+								<div class="sheet-tooltip">
+									<span>Agility</span>
+									<div class="sheet-right">
+										<div class="sheet-text-content">
+											<h3>Agility</h3>
+											<p>Hand-eye coordination and motor control skills.</p>
+										</div>
+										<i></i>
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-die-code-cell">
+								<button type='roll' class="sheet-link-button" value='!gdr [[@{agility}d6 + @{agilitypip}]]'>
+									<span name="attr_agility"></span><span>D+</span><span name="attr_agilitypip"></span>
+								</button>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Acrobatics</span>
+										<div class="sheet-right">
+											<div class="sheet-text-content">
+												<h3>Acrobatics</h3>
+												<p>Performing feats of gymnastics, extraordinary balance, and dance (and related performance arts), as well as break falls. Useful for running obstacle courses or doing water ballet.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{agility} + @{acrobaticsdice})d6 + (@{agilitypip} + @{acrobaticspip})]]'>
+										<span name="attr_acrobaticsdice"></span><span>D+</span><span name="attr_acrobaticspip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Brawling</span>
+										<div class="sheet-right">
+											<div class="sheet-text-content">
+												<h3>Brawling</h3>
+												<p>Competence in unarmed combat.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{agility} + @{brawlingdice})d6 + (@{agilitypip} + @{brawlingpip})]]'>
+										<span name="attr_brawlingdice"></span><span>D+</span><span name="attr_brawlingpip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Contortion</span>
+										<div class="sheet-right">
+											<div class="sheet-text-content">
+												<h3>Contortion</h3>
+												<p>Escaping from otherwise secure physical bonds by twisting, writhing, and contorting the body.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{agility} + @{contortiondice})d6 + (@{agilitypip} + @{contortionpip})]]'>
+										<span name="attr_contortiondice"></span><span>D+</span><span name="attr_contortionpip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Dodge</span>
+										<div class="sheet-right">
+											<div class="sheet-text-content">
+												<h3>Dodge</h3>
+												<p>Slipping out of danger’s way, whether avoiding an attack or a sprung booby trap.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{agility} + @{dodgedice})d6 + (@{agilitypip} + @{dodgepip})]]'>
+										<span name="attr_dodgedice"></span><span>D+</span><span name="attr_dodgepip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Flying</span>
+										<div class="sheet-right">
+											<div class="sheet-text-content">
+												<h3>Flying</h3>
+												<p>Maneuvering under one’s own power (such as with wings) or in null gravity.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{agility} + @{flyingdice})d6 + (@{agilitypip} + @{flyingpip})]]'>
+										<span name="attr_flyingdice"></span><span>D+</span><span name="attr_flyingpip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Marksmanship</span>
+										<div class="sheet-right">
+											<div class="sheet-text-content">
+												<h3>Marksmanship</h3>
+												<p>Shooting guns of any type. Covers everything from small slugthrowers to vehicle-mounted rockets. Also covers most internally generated blasts such as those from the Attack, Ranged power.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">					
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{agility} + @{marksmanshipdice})d6 + (@{agilitypip} + @{marksmanshippip})]]'>
+										<span name="attr_marksmanshipdice"></span><span>D+</span><span name="attr_marksmanshippip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Missile Weapons</span>
+										<div class="sheet-right">
+											<div class="sheet-text-content">
+												<h3>Missile Weapons</h3>
+												<p>Firing unpowered ranged weapons.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{agility} + @{missileweaponsdice})d6 + (@{agilitypip} + @{missileweaponspip})]]'>
+										<span name="attr_missileweaponsdice"></span><span>D+</span><span name="attr_missileweaponspip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Melee Combat</span>
+										<div class="sheet-right">
+											<div class="sheet-text-content">
+												<h3>Melee Combat</h3>
+												<p>Wielding hand-to-hand weapons.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{agility} + @{meleecombatdice})d6 + (@{agilitypip} + @{meleecombatpip})]]'>
+										<span name="attr_meleecombatdice"></span><span>D+</span><span name="attr_meleecombatpip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Riding</span>
+										<div class="sheet-right">
+											<div class="sheet-text-content">
+												<h3>Riding</h3>
+												<p>Controlling and riding domesticated mounts.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{agility} + @{ridingdice})d6 + (@{agilitypip} + @{ridingpip})]]'>
+										<span name="attr_ridingdice"></span><span>D+</span><span name="attr_ridingpip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Sleight of Hand</span>
+										<div class="sheet-right">
+											<div class="sheet-text-content">
+												<h3>Sleight of Hand</h3>
+												<p>Nimbleness with the fingers and misdirection, including picking pockets, palming items, and stage magic.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{agility} + @{sleightofhanddice})d6 + (@{agilitypip} + @{sleightofhandpip})]]'>
+										<span name="attr_sleightofhanddice"></span><span>D+</span><span name="attr_sleightofhandpip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Sneak</span>
+										<div class="sheet-right">
+											<div class="sheet-text-content">
+												<h3>Sneak</h3>
+												<p>Moving silently and avoiding detection, whether through shadows or crowds.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{agility} + @{sneakdice})d6 + (@{agilitypip} + @{sneakpip})]]'>
+										<span name="attr_sneakdice"></span><span>D+</span><span name="attr_sneakpip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Throwing</span>
+										<div class="sheet-right">
+											<div class="sheet-text-content">
+												<h3>Throwing</h3>
+												<p>Hitting a target accurately with a thrown item, including grenades, stones, and knives. Also used for catching thrown items. (Using or modifying grenades as explosives for special destructive effects requires the demolitions skill.)</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{agility} + @{throwingdice})d6 + (@{agilitypip} + @{throwingpip})]]'>
+										<span name="attr_throwingdice"></span><span>D+</span><span name="attr_throwingpip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div name="Stamina-Intellect-Spirit" class="sheet-col">
+					<div name="Stamina" class="sheet-bold" style="line-height: 1.75em">
+						<div class="sheet-attribute-table">
+							<div class="sheet-attribute-name-cell">
+								<div class="sheet-tooltip">
+									<span>Stamina</span>
+									<div class="sheet-right">
+										<div class="sheet-text-content">
+											<h3>Stamina</h3>
+											<p>Toughness and ability to stay engaged in physical activities.</p>
+										</div>
+										<i></i>
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-die-code-cell">
+								<button type='roll' class="sheet-link-button" value='!gdr [[@{stamina}d6 + @{staminapip}]]'>
+									<span name="attr_stamina"></span><span>D+</span><span name="attr_staminapip"></span>
+								</button>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Fortitude</span>
+										<div class="sheet-right">
+											<div class="sheet-text-content">
+												<h3>Fortitude</h3>
+												<p>Physical endurance and resistance to pain, disease, and poison.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{stamina} + @{fortitudedice})d6 + (@{staminapip} + @{fortitudepip})]]'>
+										<span name="attr_fortitudedice"></span><span>D+</span><span name="attr_fortitudepip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div name="Intellect" class="sheet-bold" style="line-height: 1.75em">
+						<div class="sheet-attribute-table">
+							<div class="sheet-attribute-name-cell">
+								<div class="sheet-tooltip">
+									<span>Intellect</span>
+									<div class="sheet-right">
+										<div class="sheet-text-content">
+											<h3>Intellect</h3>
+											<p>Reasoning, knowledge, and logical thought capacity.</p>
+										</div>
+										<i></i>
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-die-code-cell">
+								<button type='roll' class="sheet-link-button" value='!gdr [[@{intellect}d6 + @{intellectpip}]]'>
+									<span name="attr_intellect"></span><span>D+</span><span name="attr_intellectpip"></span>
+								</button>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Business</span>
+										<div class="sheet-right">
+											<div class="sheet-text-content">
+												<h3>Business</h3>
+												<p>Comprehension of business practices and the monetary value of goods and opportunities, including the ability to determine how to make money with another skill the character has. Business can complement charm, con, and persuasion when haggling over prices for goods and services being bought or sold.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{intellect} + @{businessdice})d6 + (@{intellectpip} + @{businesspip})]]'>
+										<span name="attr_businessdice"></span><span>D+</span><span name="attr_businesspip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Investigation</span>
+										<div class="sheet-right">
+											<div class="sheet-text-content">
+												<h3>Investigation</h3>
+												<p>Gathering information, researching topics, analyzing data, and piecing together clues.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{intellect} + @{investigationdice})d6 + (@{intellectpip} + @{investigationpip})]]'>
+										<span name="attr_investigationdice"></span><span>D+</span><span name="attr_investigationpip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Languages</span>
+										<div class="sheet-right">
+											<div class="sheet-text-content">
+												<h3>Languages</h3>
+												<p>Familiarity with and ability to use various forms of communication, including written, spoken, and nonverbal. Characters may choose one “native” language in which they have written and spoken fluency. Additional languages in which a character has proficiency can be represented by specializations of this skill.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{intellect} + @{languagesdice})d6 + (@{intellectpip} + @{languagespip})]]'>
+										<span name="attr_languagesdice"></span><span>D+</span><span name="attr_languagespip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Perception</span>
+										<div class="sheet-right">
+											<div class="sheet-text-content">
+												<h3>Perception</h3>
+												<p>The skill of noticing details and generally being aware of ones surroundings.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{intellect} + @{perceptiondice})d6 + (@{intellectpip} + @{perceptionpip})]]'>
+										<span name="attr_perceptiondice"></span><span>D+</span><span name="attr_perceptionpip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Scholar</span>
+										<div class="sheet-right">
+											<div class="sheet-text-content">
+												<h3>Scholar</h3>
+												<p>This skill represents knowledge and/or education in areas not covered under any other skill (such as chemistry, mathematics, archeology, interior design, etc.). This may be restricted to a specific field (represented by specializations) or a general knowledge of a wide range of subjects. It is used to remember details, rumors, tales, legends, theories, important people, and the like, as appropriate for the subject in question. However, the broader the category, the fewer the details that can be recalled. It covers what the character himself can recall. Having another skill as a specialization of the scholar skill means that the character knows the theories and history behind the skill but can’t actually use it. It can be useful with investigation to narrow a search for information.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{intellect} + @{scholardice})d6 + (@{intellectpip} + @{scholarpip})]]'>
+										<span name="attr_scholardice"></span><span>D+</span><span name="attr_scholarpip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Survival</span>
+										<div class="sheet-right">
+											<div class="sheet-text-content">
+												<h3>Survival</h3>
+												<p>Surviving in wilderness environments.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{intellect} + @{survivaldice})d6 + (@{intellectpip} + @{survivalpip})]]'>
+										<span name="attr_survivaldice"></span><span>D+</span><span name="attr_survivalpip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Tracking</span>
+										<div class="sheet-right">
+											<div class="sheet-text-content">
+												<h3>Tracking</h3>
+												<p>Following the trail of another person, animal, or creature, or keeping after a moving target without being noticed.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{intellect} + @{trackingdice})d6 + (@{intellectpip} + @{trackingpip})]]'>
+										<span name="attr_trackingdice"></span><span>D+</span><span name="attr_trackingpip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div name="Spirit" class="sheet-bold" style="line-height: 1.75em">
+						<div class="sheet-attribute-table">
+							<div class="sheet-attribute-name-cell">
+								<div class="sheet-tooltip">
+									<span>Spirit</span>
+									<div class="sheet-right">
+										<div class="sheet-text-content">
+											<h3>Spirit</h3>
+											<p>Strength of will and wisdom.</p>
+										</div>
+										<i></i>
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-die-code-cell">
+								<button type='roll' class="sheet-link-button" value='!gdr [[@{spirit}d6 + @{spiritpip}]]'>
+									<span name="attr_spirit"></span><span>D+</span><span name="attr_spiritpip"></span>
+								</button>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Animal Handling</span>
+										<div class="sheet-right">
+											<div class="sheet-text-content">
+												<h3>Animal Handling</h3>
+												<p>Controlling animals and making them perform tricks and follow commands.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{spirit} + @{animalhandlingdice})d6 + (@{spiritpip} + @{animalhandlingpip})]]'>
+										<span name="attr_animalhandlingdice"></span><span>D+</span><span name="attr_animalhandlingpip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Artist</span>
+										<div class="sheet-right">
+											<div class="sheet-text-content">
+												<h3>Artist</h3>
+												<p>Making works of art, like paintings, photographs, and music or literary compositions.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{spirit} + @{artistdice})d6 + (@{spiritpip} + @{artistpip})]]'>
+										<span name="attr_artistdice"></span><span>D+</span><span name="attr_artistpip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Power</span>
+										<div class="sheet-right">
+											<div class="sheet-text-content">
+												<h3>Power</h3>
+												<p>The ability to control your own power and perform unusual feats with said power.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{spirit} + @{powerdice})d6 + (@{spiritpip} + @{powerpip})]]'>
+										<span name="attr_powerdice"></span><span>D+</span><span name="attr_powerpip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Willpower</span>
+										<div class="sheet-right">
+											<div class="sheet-text-content">
+												<h3>Willpower</h3>
+												<p>The ability to resist mind control and other influencing effects such as being conned or otherwise persuaded into doing something a character wouldn’t normally do.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{spirit} + @{willpowerdice})d6 + (@{spiritpip} + @{willpowerpip})]]'>
+										<span name="attr_willpowerdice"></span><span>D+</span><span name="attr_willpowerpip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div name="Charm-Technology" class="sheet-col">
+					<div name="Charm" class="sheet-bold" style="line-height: 1.75em">
+						<div class="sheet-attribute-table">
+							<div class="sheet-attribute-name-cell">
+								<div class="sheet-tooltip">
+									<span>Charm</span>
+									<div class="sheet-left">
+										<div class="sheet-text-content">
+											<h3>Charm</h3>
+											<p>Ability to engage and influence others with words.</p>
+										</div>
+										<i></i>
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-die-code-cell">
+								<button type='roll' class="sheet-link-button" value='!gdr [[@{charm}d6 + @{charmpip}]]'>
+									<span name="attr_charm"></span><span>D+</span><span name="attr_charmpip"></span>
+								</button>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div class="sheet-skill-name-cell">
+								<div class="sheet-tooltip">
+									<span>Command</span>
+									<div class="sheet-left">
+										<div class="sheet-text-content">
+											<h3>Command</h3>
+											<p>Effectively ordering and coordinating others in team situations.</p>
+										</div>
+										<i></i>
+									</div>
+								</div>
+							</div>
+							<div class="sheet-skill-die-code-cell">
+								<button type='roll' class="sheet-link-button" value='!gdr [[(@{charm} + @{commanddice})d6 + (@{charmpip} + @{commandpip})]]'>
+									<span name="attr_commanddice"></span><span>D+</span><span name="attr_commandpip"></span>
+								</button>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Con</span>
+										<div class="sheet-left">
+											<div class="sheet-text-content">
+												<h3>Con</h3>
+												<p>Bluffing, lying, tricking, or deceiving others, as well as verbal evasiveness, misdirection, and blustering. Also useful in putting on acting performances.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{charm} + @{condice})d6 + (@{charmpip} + @{conpip})]]'>
+										<span name="attr_condice"></span><span>D+</span><span name="attr_conpip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Disguise</span>
+										<div class="sheet-left">
+											<div class="sheet-text-content">
+												<h3>Disguise</h3>
+												<p>Altering features or clothing to be unrecognizable or to look like someone else. Also useful in acting performances.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{charm} + @{disguisedice})d6 + (@{charmpip} + @{disguisepip})]]'>
+										<span name="attr_disguisedice"></span><span>D+</span><span name="attr_disguisepip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Gambling</span>
+										<div class="sheet-left">
+											<div class="sheet-text-content">
+												<h3>Gambling</h3>
+												<p>Playing and cheating at games of strategy and luck.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{charm} + @{gamblingdice})d6 + (@{charmpip} + @{gamblingpip})]]'>
+										<span name="attr_gamblingdice"></span><span>D+</span><span name="attr_gamblingpip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Intimidation</span>
+										<div class="sheet-left">
+											<div class="sheet-text-content">
+												<h3>Intimidation</h3>
+												<p>Using physical presence, verbal threats, taunts, torture, or fear to influence others or get information out of them.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{charm} + @{intimidationdice})d6 + (@{charmpip} + @{intimidationpip})]]'>
+										<span name="attr_intimidationdice"></span><span>D+</span><span name="attr_intimidationpip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Persuasion</span>
+										<div class="sheet-left">
+											<div class="sheet-text-content">
+												<h3>Persuasion</h3>
+												<p>Influencing others or getting information out of them through bribery, honest discussion, debate, diplomacy, or speeches. Also useful in negotiations, business transactions, and putting on performances (such as singing, acting, or storytelling).</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{charm} + @{persuasiondice})d6 + (@{charmpip} + @{persuasionpip})]]'>
+										<span name="attr_persuasiondice"></span><span>D+</span><span name="attr_persuasionpip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Seduction</span>
+										<div class="sheet-left">
+											<div class="sheet-text-content">
+												<h3>Seduction</h3>
+												<p>The ability to deliberately entice a person, to engage in a relationship, to lead astray, as from duty, rectitude, or the like.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{charm} + @{seductiondice})d6 + (@{charmpip} + @{seductionpip})]]'>
+										<span name="attr_seductiondice"></span><span>D+</span><span name="attr_seductionpip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Streetwise</span>
+										<div class="sheet-left">
+											<div class="sheet-text-content">
+												<h3>Streetwise</h3>
+												<p>Finding information, goods, and contacts in an urban environment, particularly through criminal organizations, black markets, and other illicit operations. Also useful for determining possible motives and methods of criminals.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{charm} + @{streetwisedice})d6 + (@{charmpip} + @{streetwisepip})]]'>
+										<span name="attr_streetwisedice"></span><span>D+</span><span name="attr_streetwisepip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div name="Technology" class="sheet-bold" style="line-height: 1.75em">
+						<div class="sheet-attribute-table">
+							<div class="sheet-attribute-name-cell">
+								<div class="sheet-tooltip">
+									<span>Technology</span>
+									<div class="sheet-left">
+										<div class="sheet-text-content">
+											<h3>Technology</h3>
+											<p>Your proficiency with the technology of the time.</p>
+										</div>
+										<i></i>
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-die-code-cell">
+								<button type='roll' class="sheet-link-button" value='!gdr [[@{technology}d6 + @{technologypip}]]'>
+									<span name="attr_technology"></span><span>D+</span><span name="attr_technologypip"></span>
+								</button>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">				
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Demolitions</span>
+										<div class="sheet-left">
+											<div class="sheet-text-content">
+												<h3>Demolitions</h3>
+												<p>Using corrosives and explosives to achieve particular destructive effects.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{technology} + @{demolitionsdice})d6 + (@{technologypip} + @{demolitionspip})]]'>
+										<span name="attr_demolitionsdice"></span><span>D+</span><span name="attr_demolitionspip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Forgery</span>
+										<div class="sheet-left">
+											<div class="sheet-text-content">
+												<h3>Forgery</h3>
+												<p>Creating and noticing false or altered documentation in various media (paper, electronic, plastic card, etc.), including counterfeiting, though tasks may require other skills to help detect or make the forgery.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{technology} + @{forgerydice})d6 + (@{technologypip} + @{forgerypip})]]'>
+										<span name="attr_forgerydice"></span><span>D+</span><span name="attr_forgerypip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Lockpicking</span>
+										<div class="sheet-left">
+											<div class="sheet-text-content">
+												<h3>Lockpicking</h3>
+												<p>Opening a mechanical (not electronic) lock or safe without possessing the key or combination, as well as disarming small mechanical traps.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{technology} + @{lockpickingdice})d6 + (@{technologypip} + @{lockpickingpip})]]'>
+										<span name="attr_lockpickingdice"></span><span>D+</span><span name="attr_lockpickingpip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Medicine</span>
+										<div class="sheet-left">
+											<div class="sheet-text-content">
+												<h3>Medicine</h3>
+												<p>Using first aid techniques to treat injuries, as well as an understanding and application of medical procedures, including diagnosing illnesses and performing surgery.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{technology} + @{medicinedice})d6 + (@{technologypip} + @{medicinepip})]]'>
+										<span name="attr_medicinedice"></span><span>D+</span><span name="attr_medicinepip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Navigation</span>
+										<div class="sheet-left">
+											<div class="sheet-text-content">
+												<h3>Navigation</h3>
+												<p>Determining the correct course using external reference points, such as stars, maps, or landmarks, as well as creating maps.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{technology} + @{navigationdice})d6 + (@{technologypip} + @{navigationpip})]]'>
+										<span name="attr_navigationdice"></span><span>D+</span><span name="attr_navigationpip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Piloting</span>
+										<div class="sheet-left">
+											<div class="sheet-text-content">
+												<h3>Piloting</h3>
+												<p>Operating any kind of vehicle or powered armor traveling on or through the ground, a liquid medium, the air, or space.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{technology} + @{pilotingdice})d6 + (@{technologypip} + @{pilotingpip})]]'>
+										<span name="attr_pilotingdice"></span><span>D+</span><span name="attr_pilotingpip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Repair</span>
+										<div class="sheet-left">
+											<div class="sheet-text-content">
+												<h3>Repair</h3>
+												<p>Creating, fixing, or modifying gadgets, weapons, armor, and vehicles.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{technology} + @{repairdice})d6 + (@{technologypip} + @{repairpip})]]'>
+										<span name="attr_repairdice"></span><span>D+</span><span name="attr_repairpip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Security</span>
+										<div class="sheet-left">
+											<div class="sheet-text-content">
+												<h3>Security</h3>
+												<p>Installing, altering, and bypassing electronic security and surveillance systems.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{technology} + @{securitydice})d6 + (@{technologypip} + @{securitypip})]]'>
+										<span name="attr_securitydice"></span><span>D+</span><span name="attr_securitypip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="sheet-attribute-table">
+							<div style="display: table-row;">
+								<div class="sheet-skill-name-cell">
+									<div class="sheet-tooltip">
+										<span>Tech</span>
+										<div class="sheet-left">
+											<div class="sheet-text-content">
+												<h3>Tech</h3>
+												<p>Using and designing (not making) complex mechanical or electronic equipment, such as programming and operating computers and manipulating communication devices.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-skill-die-code-cell">
+									<button type='roll' class="sheet-link-button" value='!gdr [[(@{technology} + @{techdice})d6 + (@{technologypip} + @{techpip})]]'>
+										<span name="attr_techdice"></span><span>D+</span><span name="attr_techpip"></span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>			
+			<div class="sheet-subheading">
+				Skill Specializations
+			</div>
+			<table class="sheet-list" style="width: 50%">
+				<tr>
+					<th style="width: 40%">Name</th>
+					<th style="width: 40%">Skill</th>
+					<th style="width: 10%">Dice</th>
+					<th style="width: 10%">Pips</th>
+				</tr>
+				<tbody>
+					<tr>
+						<td colspan="4">
+							<table width="100%" class="sheet-nested-table">
+								<tr>
+									<td style="width: 40%"><span name="attr_specializationname"></span></td>
+									<td style="width: 40%"><span name="attr_rootskill"></span></td>
+									<td style="width: 10%; text-align: center"><span name="attr_specializationdice"></span></td>
+									<td style="width: 10%; text-align: center"><span name="attr_specializationpips"></span></td>								
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="4">
+							<fieldset class="repeating_addspecialization">
+								<table width="100%" class="sheet-nested-table">
+									<tr>
+										<td style="width: 40%"><span name="attr_addspecializationname"></span></td>
+										<td style="width: 40%"><span name="attr_addrootskill"></span></td>
+										<td style="width: 10%; text-align: center"><span name="attr_addspecializationdice"></span></td>
+										<td style="width: 10%; text-align: center"><span name="attr_addspecializationpips"></span></td>
+									</tr>
+								</table>
+							</fieldset>	
+						</td>
+					</tr>				
+				</tbody>
+			</table>
+		</div>	
+		<div name="secondaryAttributes" class="sheet-section">
+			<div class="sheet-heading">
+				Secondary Attributes
+			</div>
+			<br />
+			<table style="width: 100%">
+				<tr>
+					<td>
+						<label>Move:</label>
+						<span name="attr_move"></span>
+					</td>
+					<td>
+						<div class="sheet-tooltip">
+							<label class="sheet-tooltip-pointer">Evasion:</label>
+							<div class="sheet-right">
+								<div class="sheet-text-content">
+									<h3>Evasion</h3>
+									<p>Determines how hard it is for you to be hit in combat by becoming the base difficulty required to hit you.</p>
+									<p>Equals your total Dodge die code x3 + pips</p>
+								</div>
+								<i></i>
+							</div>
+						</div>	
+						<span name="attr_evasion"></span>
+					</td>
+					<td>
+						<div class="sheet-tooltip">
+							<label class="sheet-tooltip-pointer">Resolve:</label>
+							<div class="sheet-right">
+								<div class="sheet-text-content">
+									<h3>Resolve</h3>
+									<p>Determines how hard it is for you to be hit in psychic combat by becoming the base difficulty required to hit you.</p>
+									<p>Equals your total Willpower die code x3 + pips</p>
+								</div>
+								<i></i>
+							</div>
+						</div>
+						<span name="attr_resolve"></span>
+					</td>
+					<td>
+						<div class="sheet-tooltip">
+							<label class="sheet-tooltip-pointer">Soak:</label>
+							<div class="sheet-right">
+								<div class="sheet-text-content">
+									<h3>Soak</h3>
+									<p>A component of how much physical damage you may endure.  Subtracted from all incoming physical and energy damage.</p>
+									<p>Equals your total Stamina die code x3 + pips</p>
+								</div>
+								<i></i>
+							</div>
+						</div>
+						<span name="attr_soak"></span>
+					</td>
+					<td>
+						<div class="sheet-tooltip">
+							<label class="sheet-tooltip-pointer">BP:</label>
+							<div class="sheet-left">
+								<div class="sheet-text-content">
+									<h3>Body Points (BP)</h3>
+									<p>A pool which represents your health from which incoming damage is subtracted from (after Soak).</p>
+									<p>Equals your total Stamina die code x5 + pips</p>
+								</div>
+								<i></i>
+							</div>
+						</div>
+						<input class="sheet-smalltext sheet-shorttext" type="text" name="attr_bp" />
+					</td>
+					<td>
+						<div class="sheet-tooltip">
+							<label class="sheet-tooltip-pointer">CP:</label>
+							<div class="sheet-left">
+								<div class="sheet-text-content">
+									<h3>Character Points (CP)</h3>
+									<p>May be spent on rolls to add an additional Wild Die to your pool.  Also used to improve your characters capabilities.</p>
+									<p>Character points are gained at the end of an adventure</p>
+								</div>
+								<i></i>
+							</div>
+						</div>
+						<input class="sheet-smalltext sheet-shorttext" type="text" name="attr_cp" />
+					</td>
+					<td>
+						<div class="sheet-tooltip">
+							<label class="sheet-tooltip-pointer">FP:</label>
+							<div class="sheet-left">
+								<div class="sheet-text-content">
+									<h3>Fate Points (FP)</h3>
+									<p>Spent before or after a die roll is made to double the amount rolled on the dice</p>
+									<p>Typically replenishes at the end of an adventure but may be awarded in game.</p>
+								</div>
+								<i></i>
+							</div>
+						</div>
+						<input class="sheet-smalltext sheet-shorttext" type="text" name="attr_fp" />
+					</td>
+				</tr>
+			</table>
+		</div>	
+		<div name="Advantages" class="sheet-section">
+			<div class="sheet-heading">
+				Advantages
+			</div>		
+			<br />
+			<table style="width: 100%" class="sheet-list">
+				<thead>
+					<tr>
+						<th style="width: 30%;">Name</th>
+						<th style="width: 65%;">Details</th>
+						<th style="width: 5%; text-align: center">Cost</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td colspan="3">
+							<table width="100%" class="sheet-nested-table">
+								<tr>
+									<td valign="top" style="width: 30%;"><span name="attr_advantagename"></span></td>
+									<td valign="top" style="width: 65%;"><span name="attr_advantagedetails"></span></td>
+									<td valign="top" style="width: 5%; text-align: center;"><span name="attr_advantagecost"></span></td>											
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3">
+							<fieldset class="repeating_addadvantages">
+								<table style="width: 100%; border-spacing:1px" class="sheet-nested-table">
+									<tbody>					
+										<tr>
+											<td valign="top" style="width: 30%;"><span name="attr_addadvantagename"></span></td>
+											<td valign="top" style="width: 65%;"><span name="attr_addadvantagedetails"></span></td>
+											<td valign="top" style="width: 5%; text-align: center;"><span name="attr_addadvantagecost"></span></td>
+										</tr>
+									</tbody>
+								</table>	
+							</fieldset>	
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div name="Disadvantages" class="sheet-section">
+			<div class="sheet-heading">
+				Disadvantages
+			</div>		
+			<br />
+			<table style="width: 100%" class="sheet-list">
+				<thead>
+					<tr>
+						<th style="width: 30%;">Name</th>
+						<th style="width: 65%;">Details</th>
+						<th style="width: 5%; text-align: center">Cost</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td colspan="3">
+							<table width="100%" class="sheet-nested-table">
+								<tr>
+									<td valign="top" style="width: 30%;"><span name="attr_disadvantagename"></span></td>
+									<td valign="top" style="width: 65%;"><span name="attr_disadvantagedetails"></span></td>
+									<td valign="top" style="width: 5%; text-align: center;"><span name="attr_disadvantagecost"></span></td>											
+								</tr>
+							</table>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3">
+							<fieldset class="repeating_adddisadvantages">
+								<table style="width: 100%; border-spacing:1px" class="sheet-nested-table">
+									<tbody>					
+										<tr>
+											<td valign="top" style="width: 30%;"><span name="attr_adddisadvantagename"></span></td>
+											<td valign="top" style="width: 65%;"><span name="attr_adddisadvantagedetails"></span></td>
+											<td valign="top" style="width: 5%; text-align: center;"><span name="attr_adddisadvantagecost"></span></td>
+										</tr>
+									</tbody>
+								</table>	
+							</fieldset>	
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div name="Powers" class="sheet-section sheet-die-roller-tab">
+			<div style="padding-bottom: 10px">
+				<div class="sheet-heading sheet-die-roller-tab">
+					Powers
+				</div>
+				<div>
+					<div class="sheet-die-roller">
+						<table style="float: left; border-top: 0px;">
+							<tr>
+								<td style="line-height: 18px;">
+									<div>
+										<div class="sheet-tooltip">
+											<button type="action" name="act_powersclassic" style="font-family: 'Pictos';">,</button>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Classic Roll</h3>
+													<p>Rolls dice and counts face value adding in any pips.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+										<div class="sheet-tooltip">
+											<button type="action" name="act_powerssuccesses" style="font-family: 'Pictos';">2</button>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Successes Roll</h3>
+													<p>Rolls dice and counts successes which are dice with a face value of 3 or greater.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+										<div class="sheet-tooltip">
+											<button type="action" name="act_powersluck" style="font-family: 'Pictos';">k</button>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Luck Roll</h3>
+													<p>Performs a luck test by rolling the specified number of dice with each "6" counting as one luck point.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+										<div class="sheet-tooltip">
+											<button type="action" name="act_powersunluck" style="font-family: 'Pictos';">e</button>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Unluck Roll</h3>
+													<p>Performs an uluck test by rolling the specified number of dice with each "1" counting as one unluck point.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+										<input type="hidden" class="sheet-tabstoggle" name="attr_powerssheetTab" value="powersclassic"  />
+										<div class="sheet-powersclassic">
+											Die Code: <input type="number" name="attr_powersdice" class="sheet-smallnumber sheet-shortnumber" min="1" value="2" />D+
+											<input type="number" name="attr_powerspip" class="sheet-smallnumber sheet-shortnumber" min="-99" max="99" value="0" />
+											<div class="sheet-tooltip">
+												MAP:
+												<div class="sheet-right">
+													<div class="sheet-text-content">
+														<h3>Multi-Action Penalty (MAP)</h3>
+														<p>The total penalty applied to your action rolls based on the number of standard actions you wish to take.</p>
+														<p>Equal to the number of standard actions you are taking -1 (n - 1).</p>
+													</div>
+													<i></i>
+												</div>
+											</div>									
+											<input type="number" name="attr_powerspenalty" class="sheet-smallnumber sheet-shortnumber" min="-99" max="0" value="0" />
+											<button type='roll' style="font-family: dicefontd6; padding-top: 2px" value='!gd [[(@{powersdice} + @{powerspenalty})d6 + @{powerspip}]]'>F</button>
+										</div>
+										<div class="sheet-powerssuccesses">
+											Die Code: <input type="number" name="attr_powerssuccessdice" class="sheet-smallnumber sheet-shortnumber" min="1" value="2" />D+
+											<button type='roll' style="font-family: dicefontd6; padding-top: 2px" value='!gds [[@{powerssuccessdice}d6]]'>F</button>
+										</div>
+										<div class="sheet-powersluck">
+											Die Code: <input type="number" name="attr_powersluckdice" class="sheet-smallnumber sheet-shortnumber" min="1" value="2" />D+
+											<button type='roll' style="font-family: dicefontd6; padding-top: 2px" value='!gdl [[@{powersluckdice}d6]]'>F</button>
+										</div>
+										<div class="sheet-powersunluck">
+											Die Code: <input type="number" name="attr_powersunluckdice" class="sheet-smallnumber sheet-shortnumber" min="1" value="2" />D+
+											<button type='roll' style="font-family: dicefontd6; padding-top: 2px" value='!gdu [[@{powersunluckdice}d6]]'>F</button>
+										</div>
+									</div>
+									<script type="text/worker">
+										const buttonlist = ["powersclassic", "powerssuccesses", "powersluck", "powersunluck"];
+										buttonlist.forEach(button => {
+											on(`clicked:${button}`, () => {
+												setAttrs({
+													powerssheetTab: button
+												});
+											});
+										});
+									</script>
+								</td>
+							</tr>
+						</table>						
+					</div>
+				</div>
+			</div>
+			<br />
+			<br />
+			<div name="powers" class="sheet-row">
+				<table style="width: 100%" class="sheet-list">
+					<thead>
+						<tr>
+							<th style="width: 30%;">Name</th>
+							<th style="width: 61%;">Power</th>
+							<th style="width: 3%; text-align: center">R</th>
+							<th style="width: 3%; text-align: center">ER</th>
+							<th style="width: 3%; text-align: center">TR</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td colspan="5">
+								<table width="100%" class="sheet-nested-table">
+									<tr>
+										<td style="width: 30%;"><span name="attr_powername"></span></td>
+										<td style="width: 61%;"><span name="attr_powerdetails"></span></td>
+										<td style="width: 3%; text-align: center;"><span name="attr_powerranks"></span></td>
+										<td style="width: 3%; text-align: center;"><span name="attr_powereffectiveranks"></span></td>
+										<td style="width: 3%; text-align: center;"><span name="attr_powertotalranks"></span></td>											
+									</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td colspan="5">
+								<fieldset class="repeating_addpowers">
+									<table style="width: 100%; border-spacing:1px" class="sheet-nested-table">
+										<tbody>					
+											<tr>
+												<td style="width: 30%;"><span name="attr_addpowername"></span></td>
+												<td style="width: 61%;"><span name="attr_addpowerdetails"></span></td>
+												<td style="width: 3%; text-align: center;"><span name="attr_addpowerranks"></span></td>
+												<td style="width: 3%; text-align: center;"><span name="attr_addpowereffectiveranks"></span></td>
+												<td style="width: 3%; text-align: center;"><span name="attr_addpowertotalranks"></span></td>
+											</tr>
+										</tbody>
+									</table>	
+								</fieldset>	
+							</td>
+						</tr>
+					</tbody>
+				</table>			
+			</div>
+		</div>
+		<div name="martial-arts" class="sheet-section">
+			<div style="padding-bottom: 10px">
+				<div class="sheet-heading sheet-die-roller-tab">
+					Martial Arts
+				</div>
+				<div>
+					<div class="sheet-die-roller">
+						<table style="float: left; border-top: 0px;">
+							<tr>
+								<td style="line-height: 18px;">
+									<div>
+										<div class="sheet-tooltip">
+											<button type="action" name="act_maclassic" style="font-family: 'Pictos';">,</button>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Classic Roll</h3>
+													<p>Rolls dice and counts face value adding in any pips.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+										<div class="sheet-tooltip">
+											<button type="action" name="act_masuccesses" style="font-family: 'Pictos';">2</button>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Successes Roll</h3>
+													<p>Rolls dice and counts successes which are dice with a face value of 3 or greater.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+										<div class="sheet-tooltip">
+											<button type="action" name="act_maluck" style="font-family: 'Pictos';">k</button>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Luck Roll</h3>
+													<p>Performs a luck test by rolling the specified number of dice with each "6" counting as one luck point.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+										<div class="sheet-tooltip">
+											<button type="action" name="act_maunluck" style="font-family: 'Pictos';">e</button>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Unluck Roll</h3>
+													<p>Performs an uluck test by rolling the specified number of dice with each "1" counting as one unluck point.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+										<input type="hidden" class="sheet-tabstoggle" name="attr_masheetTab" value="maclassic"  />
+										<div class="sheet-maclassic">
+											Die Code: <input type="number" name="attr_madice" class="sheet-smallnumber sheet-shortnumber" min="1" value="2" />D+
+											<input type="number" name="attr_mapip" class="sheet-smallnumber sheet-shortnumber" min="-99" max="99" value="0" />
+											<div class="sheet-tooltip">
+												MAP:
+												<div class="sheet-right">
+													<div class="sheet-text-content">
+														<h3>Multi-Action Penalty (MAP)</h3>
+														<p>The total penalty applied to your action rolls based on the number of standard actions you wish to take.</p>
+														<p>Equal to the number of standard actions you are taking -1 (n - 1).</p>
+													</div>
+													<i></i>
+												</div>
+											</div>									
+											<input type="number" name="attr_mapenalty" class="sheet-smallnumber sheet-shortnumber" min="-99" max="0" value="0" />
+											<button type='roll' style="font-family: dicefontd6; padding-top: 2px" value='!gd [[(@{madice} + @{mapenalty})d6 + @{mapip}]]'>F</button>
+										</div>
+										<div class="sheet-masuccesses">
+											Die Code: <input type="number" name="attr_masuccessdice" class="sheet-smallnumber sheet-shortnumber" min="1" value="2" />D+
+											<button type='roll' style="font-family: dicefontd6; padding-top: 2px" value='!gds [[@{masuccessdice}d6]]'>F</button>
+										</div>
+										<div class="sheet-maluck">
+											Die Code: <input type="number" name="attr_maluckdice" class="sheet-smallnumber sheet-shortnumber" min="1" value="2" />D+
+											<button type='roll' style="font-family: dicefontd6; padding-top: 2px" value='!gdl [[@{maluckdice}d6]]'>F</button>
+										</div>
+										<div class="sheet-maunluck">
+											Die Code: <input type="number" name="attr_maunluckdice" class="sheet-smallnumber sheet-shortnumber" min="1" value="2" />D+
+											<button type='roll' style="font-family: dicefontd6; padding-top: 2px" value='!gdu [[@{maunluckdice}d6]]'>F</button>
+										</div>
+									</div>
+									<script type="text/worker">
+										const buttonlist = ["maclassic", "masuccesses", "maluck", "maunluck"];
+										buttonlist.forEach(button => {
+											on(`clicked:${button}`, () => {
+												setAttrs({
+													masheetTab: button
+												});
+											});
+										});
+									</script>
+								</td>
+							</tr>
+						</table>						
+					</div>
+				</div>
+			</div>
+			<br />
+			<br />
+			<div class="sheet-colrow">
+				<div name="moves" class="sheet-row">
+					<table style="width: 100%" class="sheet-list">
+						<thead>
+							<tr>
+								<th style="width: 38%;">Name</th>
+								<th style="width: 4%; text-align: center">C</th>
+								<th style="width: 4%; text-align: center">S</th>
+								<th style="width: 4%; text-align: center">E</th>
+								<th style="width: 4%; text-align: center">R</th>
+								<th style="width: 8%; text-align: center">D</th>
+								<th style="width: 38%;">Notes</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td colspan="7">
+									<table style="width: 100%" class="sheet-nested-table">
+										<tr>
+											<td style="width: 38%;"><span name="attr_movename"></span></td>
+											<td style="width: 4%; text-align: center"><span name="attr_movecost"></span></td>
+											<td style="width: 4%; text-align: center"><span name="attr_strikebonus"></span></td>
+											<td style="width: 4%; text-align: center"><span name="attr_evasionbonus"></span></td>
+											<td style="width: 4%; text-align: center"><span name="attr_rangebonus"></span></td>
+											<td style="width: 8%; text-align: center"><span name="attr_movedamage"></span></td>
+											<td style="width: 38%;"><span name="attr_movenotes"></span></td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="7">
+									<fieldset class="repeating_addmoves">
+										<table style="width: 100%" class="sheet-nested-table">				
+											<tr>
+												<td style="width: 38%;"><span name="attr_addmovename"></span></td>
+												<td style="width: 4%; text-align: center;"><span name="attr_addmovecost"></span></td>
+												<td style="width: 4%; text-align: center;"><span name="attr_addstrikebonus"></span></td>
+												<td style="width: 4%; text-align: center;"><span name="attr_addevasionbonus"></span></td>
+												<td style="width: 4%; text-align: center;"><span name="attr_addrangebonus"></span></td>
+												<td style="width: 8%;; text-align: center"><span name="attr_addmovedamage"></span></td>
+												<td style="width: 38%;"><span name="attr_addmovenotes"></span></td>
+											</tr>
+										</table>	
+									</fieldset>
+								</td>
+							</tr>
+						</tbody>
+					</table>				
+				</div>
+			</div>
+		</div>
+		<div name="equipment" class="sheet-section">
+			<div style="padding-bottom: 10px">
+				<div class="sheet-heading sheet-die-roller-tab">
+					Equipment
+				</div>
+				<div>
+					<div class="sheet-die-roller">
+						<table style="float: left; border-top: 0px;">
+							<tr>
+								<td style="line-height: 18px;">
+									<div>
+										<div class="sheet-tooltip">
+											<button type="action" name="act_equipmentclassic" style="font-family: 'Pictos';">,</button>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Classic Roll</h3>
+													<p>Rolls dice and counts face value adding in any pips.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+										<div class="sheet-tooltip">
+											<button type="action" name="act_equipmentsuccesses" style="font-family: 'Pictos';">2</button>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Successes Roll</h3>
+													<p>Rolls dice and counts successes which are dice with a face value of 3 or greater.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+										<div class="sheet-tooltip">
+											<button type="action" name="act_equipmentluck" style="font-family: 'Pictos';">k</button>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Luck Roll</h3>
+													<p>Performs a luck test by rolling the specified number of dice with each "6" counting as one luck point.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+										<div class="sheet-tooltip">
+											<button type="action" name="act_equipmentunluck" style="font-family: 'Pictos';">e</button>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Unluck Roll</h3>
+													<p>Performs an uluck test by rolling the specified number of dice with each "1" counting as one unluck point.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+										<input type="hidden" class="sheet-tabstoggle" name="attr_equipmentsheetTab" value="equipmentclassic"  />
+										<div class="sheet-equipmentclassic">
+											Die Code: <input type="number" name="attr_equipmentdice" class="sheet-smallnumber sheet-shortnumber" min="1" value="2" />D+
+											<input type="number" name="attr_equipmentpip" class="sheet-smallnumber sheet-shortnumber" min="-99" max="99" value="0" />
+											<div class="sheet-tooltip">
+												MAP:
+												<div class="sheet-right">
+													<div class="sheet-text-content">
+														<h3>Multi-Action Penalty (MAP)</h3>
+														<p>The total penalty applied to your action rolls based on the number of standard actions you wish to take.</p>
+														<p>Equal to the number of standard actions you are taking -1 (n - 1).</p>
+													</div>
+													<i></i>
+												</div>
+											</div>									
+											<input type="number" name="attr_equipmentpenalty" class="sheet-smallnumber sheet-shortnumber" min="-99" max="0" value="0" />
+											<button type='roll' style="font-family: dicefontd6; padding-top: 2px" value='!gd [[(@{equipmentdice} + @{equipmentpenalty})d6 + @{equipmentpip}]]'>F</button>
+										</div>
+										<div class="sheet-equipmentsuccesses">
+											Die Code: <input type="number" name="attr_equipmentsuccessdice" class="sheet-smallnumber sheet-shortnumber" min="1" value="2" />D+
+											<button type='roll' style="font-family: dicefontd6; padding-top: 2px" value='!gds [[@{equipmentsuccessdice}d6]]'>F</button>
+										</div>
+										<div class="sheet-equipmentluck">
+											Die Code: <input type="number" name="attr_equipmentluckdice" class="sheet-smallnumber sheet-shortnumber" min="1" value="2" />D+
+											<button type='roll' style="font-family: dicefontd6; padding-top: 2px" value='!gdl [[@{equipmentluckdice}d6]]'>F</button>
+										</div>
+										<div class="sheet-equipmentunluck">
+											Die Code: <input type="number" name="attr_equipmentunluckdice" class="sheet-smallnumber sheet-shortnumber" min="1" value="2" />D+
+											<button type='roll' style="font-family: dicefontd6; padding-top: 2px" value='!gdu [[@{equipmentunluckdice}d6]]'>F</button>
+										</div>
+									</div>
+									<script type="text/worker">
+										const buttonlist = ["equipmentclassic", "equipmentsuccesses", "equipmentluck", "equipmentunluck"];
+										buttonlist.forEach(button => {
+											on(`clicked:${button}`, () => {
+												setAttrs({
+													equipmentsheetTab: button
+												});
+											});
+										});
+									</script>
+
+								</td>
+							</tr>
+						</table>						
+					</div>
+				</div>
+			</div>
+			<br />
+			<div style="white-space: pre-line;">
+				<span name="attr_equipment"></span>
+			</div>
+		</div>
+		<div name="notes" class="sheet-section">
+			<div class="sheet-heading">
+				Notes
+			</div>
+			<div style="white-space: pre-line;">
+				<span name="attr_notes"></span>
+			</div>
+		</div>
+	</div>
+	<div class="sheet-block-b">
+		<div style="display: table; width: 100%;">
+			<div style="display: table-row">
+				<div style="display: table-cell; width: 30%">
+					<img src="https://slackdaystudio.files.wordpress.com/2021/06/the-chimera-system-logo-black-web.png" width="220" />
+				</div>
+				<div style="display: table-cell; width: 45%; vertical-align: top">
+					<table style="width:99%">
+						<tr>
+							<td>
+								<label>Name:</label> 
+								<input class="sheet-right sheet-shorttext" type="text" name="attr_charactername" style="width:50%;" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>Occupation:</label> 
+								<input class="sheet-right sheet-shorttext" type="text" name="attr_occupation" style="width:50%;" /> 
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>Species:</label> 
+								<input class="sheet-right sheet-shorttext" style="width:50%;" type="text" name="attr_species" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>Gender:</label> 
+								<input class="sheet-right sheet-shorttext" style="width:50%;" type="text" name="attr_gender" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>Age:</label> 
+								<input class="sheet-right sheet-shorttext" style="width:50%;" type="text" name="attr_age" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>Height:</label> 
+								<input class="sheet-right sheet-shorttext" style="width:50%;" type="text" name="attr_height" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>Weight:</label> 
+								<input class="sheet-right sheet-shorttext" style="width:50%;" type="text" name="attr_weight" />
+							</td>
+						</tr>
+					</table>					
+				</div>
+				<div style="display: table-cell; width: 25%; vertical-align: top">
+					<table style="width:99%">
+						<tr>
+							<td>
+								<label>Attributes:</label> 
+								<input class="sheet-right sheet-shorttext" type="text" name="attr_attributepoints" style="width:25%;" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>Skills:</label> 
+								<input class="sheet-right sheet-shorttext" type="text" name="attr_skillpoints" style="width:25%;" /> 
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>Specializations:</label> 
+								<input class="sheet-right sheet-shorttext" style="width:25%;" type="text" name="attr_specializationpoints" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>Advantages:</label> 
+								<input class="sheet-right sheet-shorttext" style="width:25%;" type="text" name="attr_advantagepoints" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>Powers:</label> 
+								<input class="sheet-right sheet-shorttext" style="width:25%;" type="text" name="attr_powerpoints" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<label>Martial Arts:</label> 
+								<input class="sheet-right sheet-shorttext" style="width:25%;" type="text" name="attr_martialartpoints" />
+							</td>
+						</tr>
+						<tr>
+							<td>
+								<input class="sheet-right sheet-shorttext" style="width:25%;" type="text" name="attr_totalpoints" />
+							</td>
+						</tr>
+					</table>					
+				</div>
+			</div>
+		</div>
+		<div class="sheet-section">
+			<div style="padding-bottom: 10px">
+				<div class="sheet-heading">
+					Attributes &amp; Skills
+				</div>
+			</div>
+			<div name="attributes">
+				<div class="sheet-3colrow">
+					<div name="Strength-Agility" class="sheet-col">
+						<div name="Strength" class="sheet-bold" style="line-height: 1.75em">
+							<div class="sheet-attribute-table">
+								<div class="sheet-attribute-name-cell">
+									<div class="sheet-tooltip">
+										<span>Strength</span>
+										<div class="sheet-right">
+											<div class="sheet-text-content">
+												<h3>Strength</h3>
+												<p>Raw physical strength and capability to inflict damage.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-attribute-die-code-cell">
+									<input type="number" name="attr_strength" class="sheet-smallnumber sheet-shortnumber" min="1" value="2" />D+
+									<input type="number" name="attr_strengthpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Climbing</span>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Climbing</h3>
+													<p>Scaling various surfaces.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_climbingdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_climbingpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Jumping</span>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Jumping</h3>
+													<p>Leaping over obstacles.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_jumpingdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_jumpingpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Lifting</span>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Lifting</h3>
+													<p>Increases your ability to lift weights while under stress.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_liftingdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_liftingpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Running</span>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Running</h3>
+													<p>Moving quickly on the ground while avoiding obstacles and keeping from stumbling.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_runningdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_runningpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Swimming</span>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Swimming</h3>
+													<p>Moving and surviving in a liquid medium.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_swimmingdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_swimmingpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div name="Agility" class="sheet-bold" style="line-height: 1.75em">
+							<div class="sheet-attribute-table">
+								<div class="sheet-attribute-name-cell">
+									<div class="sheet-tooltip">
+										<span>Agility</span>
+										<div class="sheet-right">
+											<div class="sheet-text-content">
+												<h3>Agility</h3>
+												<p>Hand-eye coordination and motor control skills.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-attribute-die-code-cell">
+									<input type="number" name="attr_agility" class="sheet-smallnumber sheet-shortnumber" min="1" value="2" />D+
+									<input type="number" name="attr_agilitypip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Acrobatics</span>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Acrobatics</h3>
+													<p>Performing feats of gymnastics, extraordinary balance, and dance (and related performance arts), as well as break falls. Useful for running obstacle courses or doing water ballet.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_acrobaticsdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_acrobaticspip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Brawling</span>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Brawling</h3>
+													<p>Competence in unarmed combat.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_brawlingdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_brawlingpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Contortion</span>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Contortion</h3>
+													<p>Escaping from otherwise secure physical bonds by twisting, writhing, and contorting the body.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_contortiondice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_contortionpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Dodge</span>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Dodge</h3>
+													<p>Slipping out of danger’s way, whether avoiding an attack or a sprung booby trap.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_dodgedice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_dodgepip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Flying</span>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Flying</h3>
+													<p>Maneuvering under one’s own power (such as with wings) or in null gravity.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_flyingdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_flyingpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Marksmanship</span>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Marksmanship</h3>
+													<p>Shooting guns of any type. Covers everything from small slugthrowers to vehicle-mounted rockets. Also covers most internally generated blasts such as those from the Attack, Ranged power.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">							
+										<input type="number" name="attr_marksmanshipdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_marksmanshippip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Missile Weapons</span>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Missile Weapons</h3>
+													<p>Firing unpowered ranged weapons.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_missileweaponsdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_missileweaponspip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Melee Combat</span>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Melee Combat</h3>
+													<p>Wielding hand-to-hand weapons.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_meleecombatdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_meleecombatpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Riding</span>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Riding</h3>
+													<p>Controlling and riding domesticated mounts.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_ridingdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_ridingpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Sleight of Hand</span>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Sleight of Hand</h3>
+													<p>Nimbleness with the fingers and misdirection, including picking pockets, palming items, and stage magic.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_sleightofhanddice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_sleightofhandpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Sneak</span>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Sneak</h3>
+													<p>Moving silently and avoiding detection, whether through shadows or crowds.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_sneakdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_sneakpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Throwing</span>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Throwing</h3>
+													<p>Hitting a target accurately with a thrown item, including grenades, stones, and knives. Also used for catching thrown items. (Using or modifying grenades as explosives for special destructive effects requires the demolitions skill.)</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_throwingdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_throwingpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div name="Stamina-Intellect-Spirit" class="sheet-col">
+						<div name="Stamina" class="sheet-bold" style="line-height: 1.75em">
+							<div class="sheet-attribute-table">
+								<div class="sheet-attribute-name-cell">
+									<div class="sheet-tooltip">
+										<span>Stamina</span>
+										<div class="sheet-right">
+											<div class="sheet-text-content">
+												<h3>Stamina</h3>
+												<p>Toughness and ability to stay engaged in physical activities.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-attribute-die-code-cell">
+									<input type="number" name="attr_stamina" class="sheet-smallnumber sheet-shortnumber" min="1" value="2" />D+
+									<input type="number" name="attr_staminapip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Fortitude</span>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Fortitude</h3>
+													<p>Physical endurance and resistance to pain, disease, and poison.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_fortitudedice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_fortitudepip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div name="Intellect" class="sheet-bold" style="line-height: 1.75em">
+							<div class="sheet-attribute-table">
+								<div class="sheet-attribute-name-cell">
+									<div class="sheet-tooltip">
+										<span>Intellect</span>
+										<div class="sheet-right">
+											<div class="sheet-text-content">
+												<h3>Intellect</h3>
+												<p>Reasoning, knowledge, and logical thought capacity.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-attribute-die-code-cell">
+									<input type="number" name="attr_intellect" class="sheet-smallnumber sheet-shortnumber" min="1" value="2" />D+
+									<input type="number" name="attr_intellectpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Business</span>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Business</h3>
+													<p>Comprehension of business practices and the monetary value of goods and opportunities, including the ability to determine how to make money with another skill the character has. Business can complement charm, con, and persuasion when haggling over prices for goods and services being bought or sold.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_businessdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_businesspip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Investigation</span>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Investigation</h3>
+													<p>Gathering information, researching topics, analyzing data, and piecing together clues.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_investigationdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_investigationpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Languages</span>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Languages</h3>
+													<p>Familiarity with and ability to use various forms of communication, including written, spoken, and nonverbal. Characters may choose one “native” language in which they have written and spoken fluency. Additional languages in which a character has proficiency can be represented by specializations of this skill.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_languagesdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_languagespip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Perception</span>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Perception</h3>
+													<p>The skill of noticing details and generally being aware of ones surroundings.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_perceptiondice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_perceptionpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Scholar</span>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Scholar</h3>
+													<p>This skill represents knowledge and/or education in areas not covered under any other skill (such as chemistry, mathematics, archeology, interior design, etc.). This may be restricted to a specific field (represented by specializations) or a general knowledge of a wide range of subjects. It is used to remember details, rumors, tales, legends, theories, important people, and the like, as appropriate for the subject in question. However, the broader the category, the fewer the details that can be recalled. It covers what the character himself can recall. Having another skill as a specialization of the scholar skill means that the character knows the theories and history behind the skill but can’t actually use it. It can be useful with investigation to narrow a search for information.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_scholardice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_scholarpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Survival</span>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Survival</h3>
+													<p>Surviving in wilderness environments.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_survivaldice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_survivalpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Tracking</span>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Tracking</h3>
+													<p>Following the trail of another person, animal, or creature, or keeping after a moving target without being noticed.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_trackingdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_trackingpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div name="Spirit" class="sheet-bold" style="line-height: 1.75em">
+							<div class="sheet-attribute-table">
+								<div class="sheet-attribute-name-cell">
+									<div class="sheet-tooltip">
+										<span>Spirit</span>
+										<div class="sheet-right">
+											<div class="sheet-text-content">
+												<h3>Spirit</h3>
+												<p>Strength of will and wisdom.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-attribute-die-code-cell">
+									<input type="number" name="attr_spirit" class="sheet-smallnumber sheet-shortnumber" min="1" value="2" />D+
+									<input type="number" name="attr_spiritpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Animal Handling</span>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Animal Handling</h3>
+													<p>Controlling animals and making them perform tricks and follow commands.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_animalhandlingdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_animalhandlingpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Artist</span>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Artist</h3>
+													<p>Making works of art, like paintings, photographs, and music or literary compositions.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_artistdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_artistpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Power</span>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Power</h3>
+													<p>The ability to control your own power and perform unusual feats with said power.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_powerdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_powerpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Willpower</span>
+											<div class="sheet-right">
+												<div class="sheet-text-content">
+													<h3>Willpower</h3>
+													<p>The ability to resist mind control and other influencing effects such as being conned or otherwise persuaded into doing something a character wouldn’t normally do.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_willpowerdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_willpowerpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div name="Charm-Technology" class="sheet-col">
+						<div name="Charm" class="sheet-bold" style="line-height: 1.75em">
+							<div class="sheet-attribute-table">
+								<div class="sheet-attribute-name-cell">
+									<div class="sheet-tooltip">
+										<span>Charm</span>
+										<div class="sheet-left">
+											<div class="sheet-text-content">
+												<h3>Charm</h3>
+												<p>Ability to engage and influence others with words.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-attribute-die-code-cell">
+									<input type="number" name="attr_charm" class="sheet-smallnumber sheet-shortnumber" min="1" value="2" />D+
+									<input type="number" name="attr_charmpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Command</span>
+											<div class="sheet-left">
+												<div class="sheet-text-content">
+													<h3>Command</h3>
+													<p>Effectively ordering and coordinating others in team situations.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_commanddice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_commandpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Con</span>
+											<div class="sheet-left">
+												<div class="sheet-text-content">
+													<h3>Con</h3>
+													<p>Bluffing, lying, tricking, or deceiving others, as well as verbal evasiveness, misdirection, and blustering. Also useful in putting on acting performances.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_condice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_conpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Disguise</span>
+											<div class="sheet-left">
+												<div class="sheet-text-content">
+													<h3>Disguise</h3>
+													<p>Altering features or clothing to be unrecognizable or to look like someone else. Also useful in acting performances.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_disguisedice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_disguisepip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Gambling</span>
+											<div class="sheet-left">
+												<div class="sheet-text-content">
+													<h3>Gambling</h3>
+													<p>Playing and cheating at games of strategy and luck.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_gamblingdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_gamblingpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Intimidation</span>
+											<div class="sheet-left">
+												<div class="sheet-text-content">
+													<h3>Intimidation</h3>
+													<p>Using physical presence, verbal threats, taunts, torture, or fear to influence others or get information out of them.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_intimidationdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_intimidationpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Persuasion</span>
+											<div class="sheet-left">
+												<div class="sheet-text-content">
+													<h3>Persuasion</h3>
+													<p>Influencing others or getting information out of them through bribery, honest discussion, debate, diplomacy, or speeches. Also useful in negotiations, business transactions, and putting on performances (such as singing, acting, or storytelling).</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_persuasiondice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_persuasionpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Seduction</span>
+											<div class="sheet-left">
+												<div class="sheet-text-content">
+													<h3>Seduction</h3>
+													<p>The ability to deliberately entice a person, to engage in a relationship, to lead astray, as from duty, rectitude, or the like.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_seductiondice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_seductionpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Streetwise</span>
+											<div class="sheet-left">
+												<div class="sheet-text-content">
+													<h3>Streetwise</h3>
+													<p>Finding information, goods, and contacts in an urban environment, particularly through criminal organizations, black markets, and other illicit operations. Also useful for determining possible motives and methods of criminals.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_streetwisedice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_streetwisepip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div name="Technology" class="sheet-bold" style="line-height: 1.75em">
+							<div class="sheet-attribute-table">
+								<div class="sheet-attribute-name-cell">
+									<div class="sheet-tooltip">
+										<span>Technology</span>
+										<div class="sheet-left">
+											<div class="sheet-text-content">
+												<h3>Technology</h3>
+												<p>Your proficiency with the technology of the time.</p>
+											</div>
+											<i></i>
+										</div>
+									</div>
+								</div>
+								<div class="sheet-attribute-die-code-cell">
+									<input type="number" name="attr_technology" class="sheet-smallnumber sheet-shortnumber" min="1" value="2" />D+
+									<input type="number" name="attr_technologypip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+								</div>
+							</div>
+							<div class="sheet-attribute-table">				
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Demolitions</span>
+											<div class="sheet-left">
+												<div class="sheet-text-content">
+													<h3>Demolitions</h3>
+													<p>Using corrosives and explosives to achieve particular destructive effects.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_demolitionsdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_demolitionspip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Forgery</span>
+											<div class="sheet-left">
+												<div class="sheet-text-content">
+													<h3>Forgery</h3>
+													<p>Creating and noticing false or altered documentation in various media (paper, electronic, plastic card, etc.), including counterfeiting, though tasks may require other skills to help detect or make the forgery.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_forgerydice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_forgerypip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Lockpicking</span>
+											<div class="sheet-left">
+												<div class="sheet-text-content">
+													<h3>Lockpicking</h3>
+													<p>Opening a mechanical (not electronic) lock or safe without possessing the key or combination, as well as disarming small mechanical traps.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_lockpickingdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_lockpickingpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Medicine</span>
+											<div class="sheet-left">
+												<div class="sheet-text-content">
+													<h3>Medicine</h3>
+													<p>Using first aid techniques to treat injuries, as well as an understanding and application of medical procedures, including diagnosing illnesses and performing surgery.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_medicinedice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_medicinepip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Navigation</span>
+											<div class="sheet-left">
+												<div class="sheet-text-content">
+													<h3>Navigation</h3>
+													<p>Determining the correct course using external reference points, such as stars, maps, or landmarks, as well as creating maps.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_navigationdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_navigationpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Piloting</span>
+											<div class="sheet-left">
+												<div class="sheet-text-content">
+													<h3>Piloting</h3>
+													<p>Operating any kind of vehicle or powered armor traveling on or through the ground, a liquid medium, the air, or space.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_pilotingdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_pilotingpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Repair</span>
+											<div class="sheet-left">
+												<div class="sheet-text-content">
+													<h3>Repair</h3>
+													<p>Creating, fixing, or modifying gadgets, weapons, armor, and vehicles.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_repairdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_repairpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Security</span>
+											<div class="sheet-left">
+												<div class="sheet-text-content">
+													<h3>Security</h3>
+													<p>Installing, altering, and bypassing electronic security and surveillance systems.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_securitydice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_securitypip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+							<div class="sheet-attribute-table">
+								<div style="display: table-row;">
+									<div class="sheet-skill-name-cell">
+										<div class="sheet-tooltip">
+											<span>Tech</span>
+											<div class="sheet-left">
+												<div class="sheet-text-content">
+													<h3>Tech</h3>
+													<p>Using and designing (not making) complex mechanical or electronic equipment, such as programming and operating computers and manipulating communication devices.</p>
+												</div>
+												<i></i>
+											</div>
+										</div>
+									</div>
+									<div class="sheet-attribute-die-code-cell">
+										<input type="number" name="attr_techdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+										<input type="number" name="attr_techpip" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div>
+					<div class="sheet-subheading">
+						Skill Specializations
+					</div>
+					<label>Name
+						<input type="text" style="width: 34%" class="sheet-regular-textbox" name="attr_specializationname" /> Skill 
+						<input type="text" style="width: 34%" class="sheet-regular-textbox" name="attr_rootskill" /> Dice 
+						<input type="number" name="attr_specializationdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+						<input type="number" name="attr_specializationpips" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+					</label>
+					<fieldset class="repeating_addspecialization">
+						<label>Name
+							<input type="text" style="width: 34%" class="sheet-regular-textbox" name="attr_addspecializationname" /> Skill 
+							<input type="text" style="width: 34%" class="sheet-regular-textbox" name="attr_addrootskill" /> Dice 
+							<input type="number" name="attr_addspecializationdice" class="sheet-smallnumber sheet-shortnumber" min="0" value="0" />D+
+							<input type="number" name="attr_addspecializationpips" class="sheet-smallnumber sheet-shortnumber" min="0" max="2" value="0" />
+						</label>
+					</fieldset>			
+				</div>
+				<br />
+				<div class="sheet-heading">
+					Secondary Attributes
+				</div>
+				<br />
+				<table>
+					<tr>
+						<td>
+							<label>Move:</label>
+							<input class="sheet-smalltext sheet-shorttext" type="text" style="vertical-align: top" name="attr_move" value="10m" />
+						</td>
+						<td>
+							<div class="sheet-tooltip">
+								<label class="sheet-tooltip-pointer">Evasion:</label>
+								<div class="sheet-right">
+									<div class="sheet-text-content">
+										<h3>Evasion</h3>
+										<p>Determines how hard it is for you to be hit in combat by becoming the base difficulty required to hit you.</p>
+										<p>Equals your total Dodge die code x3 + pips</p>
+									</div>
+									<i></i>
+								</div>
+							</div>	
+							<input class="sheet-smalltext sheet-shorttext" type="text" name="attr_evasion" />
+						</td>
+						<td>
+							<div class="sheet-tooltip">
+								<label class="sheet-tooltip-pointer">Resolve:</label>
+								<div class="sheet-right">
+									<div class="sheet-text-content">
+										<h3>Resolve</h3>
+										<p>Determines how hard it is for you to be hit in psychic combat by becoming the base difficulty required to hit you.</p>
+										<p>Equals your total Willpower die code x3 + pips</p>
+									</div>
+									<i></i>
+								</div>
+							</div>
+							<input class="sheet-smalltext sheet-shorttext" type="text" name="attr_resolve" />
+						</td>
+						<td>
+							<div class="sheet-tooltip">
+								<label class="sheet-tooltip-pointer">Soak:</label>
+								<div class="sheet-right">
+									<div class="sheet-text-content">
+										<h3>Soak</h3>
+										<p>A component of how much physical damage you may endure.  Subtracted from all incoming physical and energy damage.</p>
+										<p>Equals your total Stamina die code x3 + pips</p>
+									</div>
+									<i></i>
+								</div>
+							</div>
+							<input class="sheet-smalltext sheet-shorttext" type="text" name="attr_soak" />
+						</td>
+						<td>
+							<div class="sheet-tooltip">
+								<label class="sheet-tooltip-pointer">BP:</label>
+								<div class="sheet-left">
+									<div class="sheet-text-content">
+										<h3>Body Points (BP)</h3>
+										<p>A pool which represents your health from which incoming damage is subtracted from (after Soak).</p>
+										<p>Equals your total Stamina die code x5 + pips</p>
+									</div>
+									<i></i>
+								</div>
+							</div>
+							<input class="sheet-smalltext sheet-shorttext" type="text" name="attr_bp" />
+						</td>
+						<td>
+							<div class="sheet-tooltip">
+								<label class="sheet-tooltip-pointer">CP:</label>
+								<div class="sheet-left">
+									<div class="sheet-text-content">
+										<h3>Character Points (CP)</h3>
+										<p>May be spent on rolls to add an additional Wild Die to your pool.  Also used to improve your characters capabilities.</p>
+										<p>Character points are gained at the end of an adventure</p>
+									</div>
+									<i></i>
+								</div>
+							</div>
+							<input class="sheet-smalltext sheet-shorttext" type="text" name="attr_cp" />
+						</td>
+						<td>
+							<div class="sheet-tooltip">
+								<label class="sheet-tooltip-pointer">FP:</label>
+								<div class="sheet-left">
+									<div class="sheet-text-content">
+										<h3>Fate Points (FP)</h3>
+										<p>Spent before or after a die roll is made to double the amount rolled on the dice</p>
+										<p>Typically replenishes at the end of an adventure but may be awarded in game.</p>
+									</div>
+									<i></i>
+								</div>
+							</div>
+							<input class="sheet-smalltext sheet-shorttext" type="text" name="attr_fp" />
+						</td>
+					</tr>
+				</table>
+			</div>		
+		</div>
+		<div name="Advantages" class="sheet-section">
+			<div class="sheet-heading">
+				Advantages
+			</div>	
+			<br />
+			<div class="sheet-colrow">
+				<div name="advantages" class="sheet-row">
+					<table style="border-spacing:1px">
+						<thead>
+							<tr>
+								<th style="width: 30%;">Name</th>
+								<th style="width: 65%;">Details</th>
+								<th style="width: 5%; text-align: center">Cost</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><input type="text" class="sheet-regular-textbox" name="attr_advantagename" style="width: 100%;" /></td>
+								<td><input type="text" class="sheet-regular-textbox" name="attr_advantagedetails" style="width: 100%;" /></td>
+								<td><input type="text" class="sheet-regular-textbox" name="attr_advantagecost" style="width: 100%;" /></td>
+							</tr>
+						</tbody>
+					</table>
+					<fieldset class="repeating_addadvantages">
+						<table style="border-spacing:1px">
+							<tbody>					
+								<tr>
+									<td style="width: 30%;"><input type="text" class="sheet-regular-textbox" name="attr_addadvantagename" style="width: 100%;" /></td>
+									<td style="width: 65%;"><input type="text" class="sheet-regular-textbox" name="attr_addadvantagedetails" style="width: 100%;" /></td>
+									<td style="width: 5%;"><input type="text" class="sheet-regular-textbox" name="attr_addadvantagecost" style="width: 100%;" /></td>
+								</tr>
+							</tbody>
+						</table>	
+					</fieldset>				
+				</div>
+			</div>
+		</div>
+		<div name="Disadvantages" class="sheet-section">
+			<div class="sheet-heading">
+				Disadvantages
+			</div>	
+			<br />
+			<div class="sheet-colrow">
+				<div name="disadvantages" class="sheet-row">
+					<table style="border-spacing:1px">
+						<thead>
+							<tr>
+								<th style="width: 30%;">Name</th>
+								<th style="width: 65%;">Details</th>
+								<th style="width: 5%; text-align: center">Cost</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><input type="text" class="sheet-regular-textbox" name="attr_disadvantagename" style="width: 100%;" /></td>
+								<td><input type="text" class="sheet-regular-textbox" name="attr_disadvantagedetails" style="width: 100%;" /></td>
+								<td><input type="text" class="sheet-regular-textbox" name="attr_disadvantagecost" style="width: 100%;" /></td>
+							</tr>
+						</tbody>
+					</table>
+					<fieldset class="repeating_adddisadvantages">
+						<table style="border-spacing:1px">
+							<tbody>					
+								<tr>
+									<td style="width: 30%;"><input type="text" class="sheet-regular-textbox" name="attr_adddisadvantagename" style="width: 100%;" /></td>
+									<td style="width: 65%;"><input type="text" class="sheet-regular-textbox" name="attr_adddisadvantagedetails" style="width: 100%;" /></td>
+									<td style="width: 5%;"><input type="text" class="sheet-regular-textbox" name="attr_adddisadvantagecost" style="width: 100%;" /></td>
+								</tr>
+							</tbody>
+						</table>	
+					</fieldset>				
+				</div>
+			</div>
+		</div>
+		<div name="Powers" class="sheet-section">
+			<div style="padding-bottom: 10px">
+				<div class="sheet-heading">
+					Powers
+				</div>
+			</div>
+			<div class="sheet-colrow">
+				<div name="powers" class="sheet-row">
+					<table style="border-spacing:1px">
+						<thead>
+							<tr>
+								<th style="width: 30%;">Name</th>
+								<th style="width: 61%;">Power</th>
+								<th style="width: 3%; text-align: center">R</th>
+								<th style="width: 3%; text-align: center">ER</th>
+								<th style="width: 3%; text-align: center">TR</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><input type="text" class="sheet-regular-textbox" name="attr_powername" style="width: 100%;" /></td>
+								<td><input type="text" class="sheet-regular-textbox" name="attr_powerdetails" style="width: 100%;" /></td>
+								<td><input type="text" class="sheet-regular-textbox" name="attr_powerranks" style="width: 100%;" /></td>
+								<td><input type="text" class="sheet-regular-textbox" name="attr_powereffectiveranks" style="width: 100%;" /></td>
+								<td><input type="text" class="sheet-regular-textbox" name="attr_powertotalranks" style="width: 100%;" /></td>
+							</tr>
+						</tbody>
+					</table>
+					<fieldset class="repeating_addpowers">
+						<table style="border-spacing:1px">
+							<tbody>					
+								<tr>
+									<td style="width: 30%;"><input type="text" class="sheet-regular-textbox" name="attr_addpowername" style="width: 100%;" /></td>
+									<td style="width: 61%;"><input type="text" class="sheet-regular-textbox" name="attr_addpowerdetails" style="width: 100%;" /></td>
+									<td style="width: 3%;"><input type="text" class="sheet-regular-textbox" name="attr_addpowerranks" style="width: 100%;" /></td>
+									<td style="width: 3%;"><input type="text" class="sheet-regular-textbox" name="attr_addpowereffectiveranks" style="width: 100%;" /></td>
+									<td style="width: 3%;"><input type="text" class="sheet-regular-textbox" name="attr_addpowertotalranks" style="width: 100%;" /></td>
+								</tr>
+							</tbody>
+						</table>	
+					</fieldset>				
+				</div>
+			</div>
+		</div>
+		<div name="martial-arts" class="sheet-section">
+			<div style="padding-bottom: 10px">
+				<div class="sheet-heading">
+					Martial Arts
+				</div>
+			</div>
+			<div class="sheet-colrow">
+				<div name="moves" class="sheet-row">
+					<table style="border-spacing:1px">
+						<thead>
+							<tr>
+								<th style="width: 40%;">Name</th>
+								<th style="width: 40%;">Maneuver</th>
+								<th style="width: 4%; text-align: center">C</th>
+								<th style="width: 4%; text-align: center">S</th>
+								<th style="width: 4%; text-align: center">E</th>
+								<th style="width: 8%; text-align: center">D</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><input type="text" class="sheet-regular-textbox" name="attr_movename" style="width: 100%;" /></td>
+								<td><input type="text" class="sheet-regular-textbox" name="attr_maneuvername" style="width: 100%;" /></td>
+								<td><input type="text" class="sheet-regular-textbox" name="attr_movecost" style="width: 100%;" /></td>
+								<td><input type="text" class="sheet-regular-textbox" name="attr_strikebonus" style="width: 100%;" /></td>
+								<td><input type="text" class="sheet-regular-textbox" name="attr_evasionbonus" style="width: 100%;" /></td>
+								<td><input type="text" class="sheet-regular-textbox" name="attr_movedamage" style="width: 100%;" /></td>
+							</tr>
+						</tbody>
+					</table>
+					<fieldset class="repeating_addmoves">
+						<table style="border-spacing:1px">
+							<tbody>					
+								<tr>
+									<td style="width: 40%;"><input type="text" class="sheet-regular-textbox" name="attr_addmovename" style="width: 100%;" /></td>
+									<td style="width: 40%;"><input type="text" class="sheet-regular-textbox" name="attr_addmaneuvername" style="width: 100%;" /></td>
+									<td style="width: 4%;"><input type="text" class="sheet-regular-textbox" name="attr_addmovecost" style="width: 100%;" /></td>
+									<td style="width: 4%;"><input type="text" class="sheet-regular-textbox" name="attr_addstrikebonus" style="width: 100%;" /></td>
+									<td style="width: 4%;"><input type="text" class="sheet-regular-textbox" name="attr_addevasionbonus" style="width: 100%;" /></td>
+									<td style="width: 8%;"><input type="text" class="sheet-regular-textbox" name="attr_addmovedamage" style="width: 100%;" /></td>
+								</tr>
+							</tbody>
+						</table>	
+					</fieldset>				
+				</div>
+			</div>
+		</div>
+		<div name="equipment" class="sheet-section">
+			<div style="padding-bottom: 10px">
+				<div class="sheet-heading">
+					Equipment
+				</div>
+			</div>
+			<div class='sheet-colrow'>
+				<textarea name="attr_equipment" style="height:200px; width:803px;"></textarea>
+			</div>
+		</div>
+		<div name="notes" class="sheet-section">
+			<div style="padding-bottom: 10px">
+				<div class="sheet-heading">
+					Notes
+				</div>
+			</div>
+			<div class='sheet-colrow'>
+				<textarea name="attr_notes" style="height:200px; width:803px;"></textarea>
+			</div>
+		</div>
+	</div>
+</div>
