@@ -4,6 +4,6 @@
 	"authors": "sentry0",
 	"roll20userid": 6148080,
 	"preview": "preview.png",
-	"instructions": "The Gemini System character sheet suitable for most genres out of the box",
+	"instructions": "The Gemini System character sheet. **IMPORTANT:** This sheet requires the GeminiDice.js script to work!",
 	"legacy": true
 }
