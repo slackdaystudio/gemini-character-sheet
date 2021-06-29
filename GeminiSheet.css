@@ -1,31 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@100;400;700&family=Orbitron:wght@700;900&display=swap');
 
 .charsheet {
-    background: rgb(27,39,53);
+    background: rgb(27, 39, 53);
     background: radial-gradient(circle, rgba(27,39,53,1) 60%, rgba(9,10,15,1) 100%);
 	border-radius: 20px;
-	border: 10px solid black;
+	border: 3px solid #57769e;
 	color: #d6e3ff;
 	font-family: 'Fira Sans';
 	font-size: 1.1em;
 }
 
+:root {
+    --shadow-color: #57769e;
+    --shadow-color-light: white;
+}
+  
 .charsheet .sheet-heading {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	padding-left: 8px;
-	font-size: 2em; 
-	font-family: Orbitron;
-	background: #404c69b8;
-	letter-spacing: 0.3em;
-	border-radius: 10px;
-	font-weight: 900;
-    color: #d6e3ff;
-    /* -webkit-text-fill-color: #ffffff; /* Will override color (regardless of order) */
-    /* -webkit-text-stroke-width: 1px; */
-    /* -webkit-text-stroke-color: #000000; */
+    font-size: 2em;
+    text-transform: uppercase;
+    font-family: Orbitron;
+    font-weight: 900;
+    display: block;
+    background: #404c69b8;
+    border-radius: 10px;
 }
-
+  
+.charsheet .sheet-heading {
+    color: #57769e;
+    text-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+    0 0 3px var(--shadow-color-light), 0 0 5px var(--shadow-color-light), 0 0 10px var(--shadow-color-light),
+    0 0 8px var(--shadow-color), 0 0 20px var(--shadow-color), 0 0 25px var(--shadow-color), 0 0 35px var(--shadow-color), 0 0 25px var(--shadow-color), 0 0 100px var(--shadow-color);
+}
+  
 .charsheet .sheet-die-roller-tab {
 	border-bottom-left-radius: 0px;
 }
@@ -93,7 +102,7 @@
 }
 
 .charsheet th {
-	font-size: 1.3em;
+	font-size: 1.1em;
 	font-weight: 700;
 	border-bottom: 3px solid black;
 }
@@ -169,7 +178,6 @@ button:active
 
 .charsheet button[type=action]:not(.sheet-link-button) {
 	color: #000000;
-    /* background-color: #bacef9; */
 	height: 1em;
     padding: 2px 3px;
     font-size: 1.3em;
@@ -177,11 +185,9 @@ button:active
     display: inline-block;
     line-height: 18px;
     text-align: center;
-    /* text-shadow: 0 1px 1px rgb(255 255 255 / 75%); */
     vertical-align: middle;
     border: 1px solid #57769e;
     border-radius: 4px;
-    /* box-shadow: inset 0 1px 0 rgb(255 255 255 / 20%), 0 1px 2px rgb(0 0 0 / 5%); */
     cursor: pointer;
     min-width: 17px;
 }
@@ -296,6 +302,7 @@ button:active
 .charsheet label {
 	color: #d6e3ff;
 	font-weight: 700;
+    font-size: 0.95em;
 	display: inline;
 }
 
@@ -328,18 +335,11 @@ button:active
 .sheet-tooltip span,
 .sheet-link-button span {
     color: #d6e3ff;
-    /* -webkit-text-fill-color: #38495a; /* Will override color (regardless of order) */
-    /* -webkit-text-stroke-width: 1px; */
-    /* -webkit-text-stroke-color: #ffffff; */
-    /* background: -webkit-linear-gradient(#e67d00, #f8d215);
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
 }
 
 .sheet-tooltip h3 {
 	margin:12px 0;
-	color: #FEA600;
+	color: #d6e3ff;
 	font-weight: 700;
 	font-family: Orbitron;
 	font-size: 1.5em;
@@ -367,7 +367,7 @@ button:active
     margin-left:20px;
     transform:translate(0, -50%);
     padding:0;
-    background-color:#444444;
+    background-color:#57769e;
     font-weight: normal;
     font-size:13px;
     border-radius:8px;
@@ -383,8 +383,7 @@ button:active
 
 .sheet-tooltip .sheet-text-content > p {
 	font-family: 'Fira Sans';
-	color:#EEEEEE;
-	font-weight:100;
+	color:#d6e3ff;
     font-size:1em;
 }
 
@@ -410,7 +409,7 @@ button:active
     left:0;
     top:50%;
     transform:translate(50%,-50%) rotate(-45deg);
-    background-color:#444444;
+    background-color:#57769e;
     box-shadow:0 1px 8px rgba(0,0,0,0.5);
 }
 
@@ -423,8 +422,8 @@ button:active
     margin-left:20px;
     transform:translate(0, -50%);
     padding:0;
-    color:#EEEEEE;
-    background-color:#444444;
+    color:#d6e3ff;
+    background-color:#57769e;
     font-weight:normal;
     font-size:13px;
     border-radius:8px;
@@ -460,7 +459,7 @@ button:active
     right:0;
     top:50%;
     transform:translate(-50%,-50%) rotate(45deg);
-    background-color:#444444;
+    background-color:#57769e;
     box-shadow:0 1px 8px rgba(0,0,0,0.5);
 }
 
@@ -512,6 +511,7 @@ button:active
 	overflow: hidden;
 	position: relative;
     margin: 0 0 0 -15px;
+    z-index: 1;
 }
 
 .circle-container {
@@ -526,7 +526,7 @@ button:active
 	height: 100%;
 	border-radius: 50%;
 	mix-blend-mode: screen;
-	background-image: radial-gradient(#99ffff, #99ffff 10%, rgba(153, 255, 255, 0) 56%);
+	background-image: radial-gradient(#aab7c9, #6f8fd3 30%, rgba(153, 255, 255, 0) 56%);
 	animation: fadein-frames 200ms infinite, scale-frames 2s infinite;
 }
 
