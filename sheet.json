@@ -5,5 +5,5 @@
 	"roll20userid": 6148080,
 	"preview": "preview.png",
 	"instructions": "The Gemini System character sheet. **IMPORTANT:** This sheet requires the GeminiDice.js script to work!",
-	"legacy": true
+	"legacy": false
 }
