@@ -3,7 +3,7 @@
 	"css": "GeminiSheet.css",
 	"authors": "sentry0",
 	"roll20userid": 6148080,
-	"preview": "preview.png",
+	"preview": "https://slackdaystudio.files.wordpress.com/2023/10/preview.png",
 	"instructions": "The Gemini System character sheet. **IMPORTANT:** This sheet requires the GeminiDice.js script to work!",
 	"legacy": false
 }
