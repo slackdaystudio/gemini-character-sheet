@@ -3,7 +3,7 @@ The character sheet contains everything you need to play the game and includes 2
 edit.  To switch between view and edit modes simply check the box labeled "Edit" in the top right of the 
 character sheet to enter edit mode or uncheck to return to view mode.
 
-***Insert Screenshot of the edit checkbox here***
+![Edit Button](edit-button.svg?raw=true)
 
 Let's discuss each mode of operation in their own sections.
 
@@ -22,3 +22,5 @@ to you for rolling dice below.
 #### Attributes & Skills
 Clicking on an Attribute will roll the die code and return the results to you in the chat pane of Roll20.  You 
 should see something similar to the following screenshot in your chat pane:
+
+![Gemini Dice Result](gemini-dice-result.svg?raw=true)
