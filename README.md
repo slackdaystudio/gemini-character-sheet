@@ -44,6 +44,7 @@ playing a game.  The image below is of the "Attributes annd Skills" section.
    - Unluck, counts each six as a point of unluck
 1. Use this section to adjust the amount of dice and pips rolled.  Press the six-sided die button to roll.
 1. This button will roll initiaive for you
+
 Other headings on your character sheet have dice rollers as well.  The Attributes and Skills roller is 
 unique in the sense that it has the "Initiative" button.
 
